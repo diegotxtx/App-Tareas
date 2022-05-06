@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tareas App</title> <!-- Titulo de la pestaña en el navegador-->
+    <!--Siguiente linea es bootstrap-->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <!--Agrega un icono a la pestaña-->
+    <link rel="icon" href="lista-de-tareas1.png">
+</head>
+<!--Comienza el cuerpo de nuestra página principal-->
+<body class="bg-dark"><!--Con una función de bootstrap ponemos el fondo obscuro-->
+    <!--NAVEGACIÓN-->
+    <!--En esta parte crearemos una sección donde se mostrará la navegacion de nuestra app-->
+    <nav class="navbar navbar-light bg-light">
+        <!--Utilizamos un div para centrar el titulo de la app-->
+        <div class="container">
+            <!--El link no nos llevará a ningun lado pero se muestra el titulo de la app-->
+            <a href="#" class="navbar-brand">App de Tareas </a>
+        </div>
+    </nav>
+    <!--EMPIEZA CONTENIDO PRINCIPAL-->
+    <!--Div para centrar el contenido-->
+    <div class="container">
+        <!--Div para crear fila-->
+        <div class="row pt-5"><!--Creamos algunas filas-->
+            <div class="col-md-4"><!--Creamos 4 columnas-->
+                <div class="card"><!--Div para el recuadro-->
+                    <div class="card-body"><!--Div para agregar contenido-->
+                        <form id="formTask"><!--Creacion del formulario-->
+                            <div class="form-group">
+                                <!--Espacio para título de la tarea a realizar-->
+                                <input type="text" id="title" placeholder="Agregar una tarea" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <!--Espacio para descripción de la tarea a realizar-->
+                                <textarea id="description" rows="8" cols="60" class="form-control" placeholder="Agrega una descripción..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8"><!--Creamos 8 columnas-->
+                <!--Dentro del div tasks se iran agregando las tareas por medio de JS-->
+                <div id="tasks"></div>
+            </div>
+        </div>
+    </div>
+    <!--Empiezan SCRIPTS-->
+    <script src="app.js"></script><!--Nos sirve para tener comunicación con el archivo-->
+</body>
+</html>
